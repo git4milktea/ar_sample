@@ -38,7 +38,7 @@
         var marker = this.el;
         alert(marker.id + " reg");
         // 以下、マーカーを検出時のイベント
-        marker.addEventListener('marker', function () {
+        marker.addEventListener('markerLost', function () {
            var markerId = marker.id;
            //a-text要素を生成する
            alert(marker.id + " found!");
