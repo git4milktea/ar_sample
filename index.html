@@ -38,24 +38,24 @@
         var marker = this.el;
         alert(marker.id + " reg");
         // 以下、マーカーを検出時のイベント
-        marker.addEventListener('markerFound', function () {
+        marker.addEventListener('marker', function () {
            var markerId = marker.id;
            //a-text要素を生成する
            alert(marker.id + " found!");
-//           let dev_label_static = document.createElement('a-text');
-//           dev_label_static.id='dev_label_static';
+           let dev_label_static = document.createElement('a-text');
+           dev_label_static.id='dev_label_static';
            let scene = document.getElementById("room_scene");
            let dev_label = document.getElementById("dev_label");
            alert(scene.id + " is got!");
            alert(dev_label.id + " is got!");
            //dev_label_staticをa-sceneに追加する
-//           dev_label_static.setAttribute("id", "dev_label");
-//           dev_label_static.setAttribute('value', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-//           dev_label_static.setAttribute('position', '0 2 0');
-//           dev_label_static.setAttribute('align', 'center');
-//           dev_label_static.setAttribute('rotation', '0 0 0');
-//           dev_label_static.setAttribute('color', '#00aa55');
-//           scene.appendChild(dev_label_static);
+           dev_label_static.setAttribute("id", "dev_label");
+           dev_label_static.setAttribute('value', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+           dev_label_static.setAttribute('position', '0 2 0');
+           dev_label_static.setAttribute('align', 'center');
+           dev_label_static.setAttribute('rotation', '0 0 0');
+           dev_label_static.setAttribute('color', '#00aa55');
+           scene.appendChild(dev_label_static);
            scene.appendChild(dev_label);
         });
         }
