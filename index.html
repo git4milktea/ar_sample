@@ -42,7 +42,7 @@
            var markerId = marker.id;
            //a-text要素を生成する
            alert(marker.id + " found!");
-           let dev_label_static = document.createElement('a-text');
+           let dev_label_static = document.createElement("a-text");
            dev_label_static.id='dev_label_static';
            let scene = document.getElementById("room_scene");
            let dev_label = document.getElementById("dev_label");
@@ -62,13 +62,13 @@
         });
         </script>
 
+
+        
+        <a-scene id="room_scene" embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
         <a-marker preset="hiro" id="room_marker" registerevents>
 <!--              <a-text id="dev_label" value="Hello AR!\n This is real." position="0 2 0" align="center" rotation="0 0 0" color="#000000">  
               </a-text>
 -->            </a-marker>
-
-        
-        <a-scene id="room_scene" embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
             <a-entity camera></a-entity>
         </a-scene>
     </body>
