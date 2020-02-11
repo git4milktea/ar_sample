@@ -11,22 +11,22 @@
         <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
        <script>
-       document.getElementById("request_permission"){
-       if (
-          DeviceMotionEvent &&
-          DeviceMotionEvent.requestPermission &&
-         typeof DeviceMotionEvent.requestPermission === 'function'
-        ) {
+//       document.getElementById("request_permission"){
+//       if (
+//          DeviceMotionEvent &&
+//          DeviceMotionEvent.requestPermission &&
+//         typeof DeviceMotionEvent.requestPermission === 'function'
+//        ) {
              DeviceMotionEvent.requestPermission();
-          }
-       if (
-          DeviceOrientationEvent &&
-          DeviceOrientationEvent.requestPermission &&
-          typeof DeviceOrientationEvent.requestPermission === 'function'
-       ) {
+//          }
+//       if (
+//          DeviceOrientationEvent &&
+//          DeviceOrientationEvent.requestPermission &&
+//          typeof DeviceOrientationEvent.requestPermission === 'function'
+//       ) {
             DeviceOrientationEvent.requestPermission();
-         }
-       }
+//         }
+//       }
        </script>
 
         <a-scene embedded arjs="debugUIEnabled:false; sourceType: webcam;">
