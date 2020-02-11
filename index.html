@@ -4,7 +4,25 @@
         <meta name="viewport" content="width=device-width,intial-scale=1">
         <title>WebAR</title>
     </head>
+    
     <body style="margin:0px; overflow:hidden;">
+      <script>
+       if (
+          DeviceMotionEvent &&
+          DeviceMotionEvent.requestPermission &&
+         typeof DeviceMotionEvent.requestPermission === 'function'
+        ) {
+             DeviceMotionEvent.requestPermission();
+          }
+       if (
+          DeviceOrientationEvent &&
+          DeviceOrientationEvent.requestPermission &&
+          typeof DeviceOrientationEvent.requestPermission === 'function'
+       ) {
+            DeviceOrientationEvent.requestPermission();
+         }
+       </script>
+        
         <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
         <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
