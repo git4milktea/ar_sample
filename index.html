@@ -36,12 +36,12 @@
         AFRAME.registerComponent('registerevents', {
         init: function () {
         var marker = this.el;
-        alert(marker.id);
+        alert(marker.id + "1");
         // 以下、マーカーを検出時のイベント
         marker.addEventListener('markerFound', function () {
            var markerId = room.id;
            //a-text要素を生成する
-           aleart(markerId);
+           aleart(markerId + "2, found!");
            let dev_label_static = document.createElement("a-text");
            dev_label_static.id = "dev_label_static";
            let scene = document.getElementById("scene");
