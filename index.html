@@ -51,7 +51,7 @@
            //dev_label_staticをa-sceneに追加する
            dev_label_static.setAttribute("id", "dev_label_static");
            dev_label_static.setAttribute('value', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
-           dev_label_static.setAttribute('position', '0 2 0');
+           dev_label_static.setAttribute('position', '0 2.5 0');
            dev_label_static.setAttribute('align', 'center');
            dev_label_static.setAttribute('rotation', '0 0 0');
            dev_label_static.setAttribute('color', '#00aa55');
@@ -65,10 +65,10 @@
 
         
         <a-scene id="room_scene" embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
-        <a-marker preset="hiro" id="room_marker" registerevents>
-<!--              <a-text id="dev_label" value="Hello AR!\n This is real." position="0 2 0" align="center" rotation="0 0 0" color="#000000">  
+            <a-marker preset="hiro" id="room_marker" registerevents>
+              <a-text id="dev_label" value="Hello AR!\n This is real." position="0 2 0" align="center" rotation="0 0 0" color="#000000">  
               </a-text>
--->            </a-marker>
+            </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
     </body>
