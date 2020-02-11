@@ -31,12 +31,35 @@
         
         window.onload=request_permission
         </script>
+        <script>
+        AFRAME.registerComponent('registerevents', {
+        init: function () {
+        var marker = this.el;
+        // 以下、マーカーを検出時のイベント
+        marker.addEventListener('markerFound', function () {
+           var markerId = island.id;
+           //a-text要素を生成する
+           let dev_label = document.createElement("a-text");
+           dev_label.id = "dev_label";
+           let scene = document.getElementById("scene");
+           //dev_labelをa-sceneに追加する
+           scene.appendChild(dev_label);
+           //objファイルとmtlファイルをa-obj-model要素に追加する
+           dev_label.setAttribute("value", "Hello! AR! ¥n This is real!");
+           dev_label.setAttribute("position", "0 0 1");
+           dev_label.setAttribute("align", "center");
+           dev_label.setAttribute("rotation", "-90 0 0");
+           dev_label.setAttribute("color", "#000000");
+        });
+        }
+        });
+        </script>
   
         <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
-            <a-marker preset="hiro">
-              <a-text value="Hello AR!\n This is real." position="0 1 0" align="center" rotation="0 0 0" color="#000000">  
+            <a-marker preset="hiro" id="room" registerevents>
+<!--              <a-text value="Hello AR!\n This is real." position="0 1 0" align="center" rotation="0 0 0" color="#000000">  
               </a-text>
-            </a-marker>
+-->            </a-marker>
             <a-entity camera><a-text></a-text></a-entity>
         </a-scene>
     </body>
