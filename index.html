@@ -3,14 +3,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,intial-scale=1">
         <title>WebAR</title>
+        
+        <script src="//cdn.8thwall.com/web/aframe/8frame-0.8.2.min.js"></script>
+        <script src="//apps.8thwall.com/xrweb?appKey=hJYU3vzKtNYKLqwHqTQOQEl7YGgjl5lWw8CuYlWGezYSD0v3U7tbYMbDfBuavJc70EWwHq"></script>
     </head>
     
     
     <body style="margin:0px; overflow:hidden;">
         
-        <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
-        <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-
         <script type="text/javascript">
         function request_permission(){
          if (
@@ -32,12 +32,18 @@
         window.onload=request_permission
         </script>
   
-        <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
-            <a-marker preset="hiro">
-              <a-text value="Hello AR!\n This is real." position="0 1 0" align="center" rotation="0 0 0" color="#000000">  
-              </a-text>
-            </a-marker>
-            <a-entity camera><a-text></a-text></a-entity>
-        </a-scene>
+    <a-scene background="color: #ECECEC" xrweb>
+      <a-camera position="0 8 8"></a-camera>
+      <a-text value="aiueo" color="#000000"></a-text>
+    </a-scene>
+    
+    
+<script>
+var scene = document.querySelector("a-scene")
+scene.addEventListener('click',function(){
+scene.emit('recenter',{})
+});
+</script>
+               
     </body>
 </html>
